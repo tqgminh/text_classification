@@ -9,23 +9,23 @@ reader_bias_b1 = open('bias_b1.txt', 'r', encoding='utf-8')
 reader_bias_b2 = open('bias_b2.txt', 'r', encoding='utf-8')
 reader_bias_out = open('bias_out.txt', 'r', encoding='utf-8')
 
-h_1 = np.zeros((100, 50))
-h_2 = np.zeros((50, 50))
-h_out = np.zeros((50, 10))
-b_1 = np.zeros(50)
-b_2 = np.zeros(50)
+h_1 = np.zeros((400, 100))
+h_2 = np.zeros((100, 100))
+h_out = np.zeros((100, 10))
+b_1 = np.zeros(100)
+b_2 = np.zeros(100)
 b_out = np.zeros(10)
 
 weight_h1 = reader_weight_h1.readlines()
 for i in range(len(weight_h1)):
     words = weight_h1[i].split(' ')
-    for j in range(len(words)):
+    for j in range(len(words)-1):
         h_1[i][j] = float(words[j])
 
 weight_h2 = reader_weight_h2.readlines()
 for i in range(len(weight_h2)):
     words = weight_h2[i].split(' ')
-    for j in range(len(words)):
+    for j in range(len(words)-1):
         h_2[i][j] = float(words[j])
 
 weight_out = reader_weight_out.readlines()
@@ -63,10 +63,10 @@ def text_vectorize(document):
     reader_dict = open('top_word.txt', 'r', encoding='utf-8')
     words = reader_dict.read()
     words = words.split('\n')
-    x = np.zeros((1,100))
+    x = np.zeros((1, 400))
     word = document.split(' ')
     for w in word:
-        for i in range(100):
+        for i in range(400):
             if w == words[i]:
                 x[0][i] += 1
     return x

@@ -4,11 +4,11 @@ import tensorflow as tf
 #đọc các vector đầu vào, đầu ra từ văn bản đã được mã hóa
 reader_train_input = open('input_train_vector.txt', 'r', encoding='utf-8')
 lines = reader_train_input.readlines()
-X_train = np.zeros((len(lines), 100))
+X_train = np.zeros((len(lines), 400))
 index = 0
 for line in lines:
     words = line.split(' ')
-    for i in range(100):
+    for i in range(400):
         X_train[index][i] = float(words[i])
     index += 1
 
@@ -24,11 +24,11 @@ for line in lines:
 
 reader_test_input = open('input_test_vector.txt', 'r', encoding='utf-8')
 lines = reader_test_input.readlines()
-X_test = np.zeros((len(lines), 100))
+X_test = np.zeros((len(lines), 400))
 index = 0
 for line in lines:
     words = line.split(' ')
-    for i in range(100):
+    for i in range(400):
         X_test[index][i] = float(words[i])
     index += 1
 
@@ -47,9 +47,9 @@ learning_rate = 0.1
 num_steps = 1000
 display_step = 100
 
-n_hidden_1 = 50
-n_hidden_2 = 50
-input_shape = 100
+n_hidden_1 = 100
+n_hidden_2 = 100
+input_shape = 400
 num_classes = 10
 
 #xây dựng mô hình neural network
@@ -73,11 +73,11 @@ biases = {
 
 #tính toán theo mạng neural
 def neural_net(x):
-    # Hidden fully connected layer with 256 neurons
+    # layer 1
     layer_1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])
-    # Hidden fully connected layer with 256 neurons
+    # layer 2
     layer_2 = tf.add(tf.matmul(layer_1, weights['h2']), biases['b2'])
-    # Output fully connected layer with a neuron for each class
+    # Output layer
     out_layer = tf.matmul(layer_2, weights['out']) + biases['out']
     return out_layer
 
@@ -110,35 +110,35 @@ with tf.compat.v1.Session() as sess:
     #lấy kết quả đã training
     weights_h1, weights_h2, weights_out, biases_b1, biases_b2, biases_out = sess.run([weights['h1'], weights['h2'], weights['out'], biases['b1'], biases['b2'], biases['out']])
 
-writer_weight_h1 = open('weight_h1.txt', 'w', encoding='utf-8')
-writer_weight_h2 = open('weight_h2.txt', 'w', encoding='utf-8')
-writer_weight_out = open('weight_out.txt', 'w', encoding='utf-8')
-writer_bias_b1 = open('bias_b1.txt', 'w', encoding='utf-8')
-writer_bias_b2 = open('bias_b2.txt', 'w', encoding='utf-8')
-writer_bias_out = open('bias_out.txt', 'w', encoding='utf-8')
-
 #ghi kết quả các tham số weight và bias ra console
 for i in range(input_shape):
     for j in range(n_hidden_1):
         print(str(weights_h1[i][j]), end=' ')
     print('')
 print("\n")
+
 for i in range(n_hidden_1):
     for j in range(n_hidden_2):
         print(str(weights_h2[i][j]), end=' ')
     print('')
 print("\n")
+
+
 for i in range(n_hidden_2):
     for j in range(num_classes):
         print(str(weights_out[i][j]), end=' ')
     print('')
 print("\n")
+
 for i in range(n_hidden_1):
     print(str(biases_b1[i]), end=' ')
 print("\n")
+
+
 for i in range(n_hidden_2):
     print(str(biases_b2[i]), end=' ')
 print("\n")
+
 for i in range(num_classes):
     print(str(biases_out[i]), end=' ')
 
