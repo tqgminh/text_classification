@@ -15,7 +15,7 @@ We got stopword.txt at https://xltiengviet.fandom.com/wiki/Danh_s%C3%A1ch_stop_w
 Installation Instructions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This tool is available in Python 3.
+This tool requires Python 3 environment.
 
 Direct your path to 'demo' directory by 'cd' command. To run this tool, you need to install flask, pyvi module. Open your command prompt and run these commands:
 
