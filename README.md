@@ -8,3 +8,6 @@ Reference in https://nguyenvanhieu.vn/phan-loai-van-ban-tieng-viet and https://n
 Dataset in https://github.com/duyvuleo/VNTC.
 
 We got stopword.txt at https://xltiengviet.fandom.com/wiki/Danh_s%C3%A1ch_stop_word.
+
+Install introduction
+^^^^^^^^^^^^^^^^^^^^
