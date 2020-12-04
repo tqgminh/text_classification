@@ -21,6 +21,8 @@ Direct your path to 'demo' directory by 'cd' command. To run this tool, you need
 
 .. code:: shell
 
+    pip install numpy
+    pip install regex
     pip install flask
     pip install pyvi
     py app.py
