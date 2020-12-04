@@ -17,5 +17,5 @@ Install introduction
 To run this tool, you need to install flask, pyvi. Open command prompt and run these commands
 
 .. code:: shell
-    pip install flask
-    pip install pyvi
+pip install flask
+pip install pyvi
