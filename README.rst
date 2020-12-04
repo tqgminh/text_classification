@@ -14,7 +14,8 @@ We got stopword.txt at https://xltiengviet.fandom.com/wiki/Danh_s%C3%A1ch_stop_w
 Install introduction
 ^^^^^^^^^^^^^^^^^^^^
 
-Install flask, pyvi. Open command prompt and run these command
+To run this tool, you need to install flask, pyvi. Open command prompt and run these commands
+
 .. code:: shell
     pip install flask
     pip install pyvi
