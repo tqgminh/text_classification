@@ -1,9 +1,9 @@
-text_classification
-^^^^^^^^^^^^^^^^^^^
+Text Cassification
+^^^^^^^^^^^^^^^^^^
 
-Text classification is practiced following two ways: Naive Bayes classification algorithm and Neural network model.
+Vietnamese text classification problem is practiced following two ways: Naive Bayes classification algorithm and Neural network model.
 
-Author: Trần Quang Minh, Nguyễn Quang Huy, Nguyễn Nam Hán, Vũ Tấn Khang.
+Contributor: Trần Quang Minh, Nguyễn Quang Huy, Nguyễn Nam Hán, Vũ Tấn Khang.
 
 Reference in https://nguyenvanhieu.vn/phan-loai-van-ban-tieng-viet and https://nguyenvanhieu.vn/xay-dung-mo-hinh-neural-network.
 
@@ -11,18 +11,18 @@ Dataset in https://github.com/duyvuleo/VNTC.
 
 We got stopword.txt at https://xltiengviet.fandom.com/wiki/Danh_s%C3%A1ch_stop_word.
 
-Install introduction
-^^^^^^^^^^^^^^^^^^^^
 
-To run this tool, you need to install flask, pyvi. Open command prompt and run these commands
+Installation Instructions
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This tool is available in Python 3.
+
+Direct your path to 'demo' directory by 'cd' command. To run this tool, you need to install flask, pyvi module. Open your command prompt and run these commands:
 
 .. code:: shell
 
     pip install flask
     pip install pyvi
-    
-Then you need to direct 'demo' directory by command 'cd'. After that you run this command:
-
-.. code:: shell
-
     py app.py
+
+An IP address will appear after a few seconds (maybe it is http://127.0.0.1:5000). Type this address in a web browser and enter to use text classification tool.
