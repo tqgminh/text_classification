@@ -20,3 +20,9 @@ To run this tool, you need to install flask, pyvi. Open command prompt and run t
 
     pip install flask
     pip install pyvi
+    
+Then you need to direct 'demo' directory by command 'cd'. After that you run this command:
+
+.. code:: shell
+
+    py app.py
