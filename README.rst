@@ -12,7 +12,7 @@ Dataset in https://github.com/duyvuleo/VNTC.
 We got stopword.txt at https://xltiengviet.fandom.com/wiki/Danh_s%C3%A1ch_stop_word.
 
 
-Installation Instructions
+Installation Instruction
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This tool requires Python 3 environment.
