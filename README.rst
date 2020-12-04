@@ -1,5 +1,5 @@
-Text Cassification
-^^^^^^^^^^^^^^^^^^
+Text Classification
+^^^^^^^^^^^^^^^^^^^
 
 Vietnamese text classification problem is practiced following two ways: Naive Bayes classification algorithm and Neural network model.
 
