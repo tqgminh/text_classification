@@ -1,7 +1,7 @@
 Text Classification
 ^^^^^^^^^^^^^^^^^^^
 
-Vietnamese text classification problem is practiced following two ways: Naive Bayes classification algorithm and Neural network model.
+Vietnamese text classification problem is practiced in two ways: Naive Bayes classification algorithm and Neural network model.
 
 Contributor: Trần Quang Minh, Nguyễn Quang Huy, Nguyễn Nam Hán, Vũ Tấn Khang.
 
