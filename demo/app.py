@@ -253,11 +253,11 @@ for i in range(len(words)):
     b_out[i] = float(words[i])
 
 def neural_network(x):
-    # Hidden fully connected layer with 256 neurons
+    # Layer 1
     layer_1 = x.dot(h_1) +b_1
-    # Hidden fully connected layer with 256 neurons
+    # Layer 2
     layer_2 = layer_1.dot(h_2) + b_2
-    # Output fully connected layer with a neuron for each class
+    # Output layer
     out_layer = layer_2.dot(h_out) + b_out
     return out_layer
 
