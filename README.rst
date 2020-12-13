@@ -25,6 +25,6 @@ Direct your path to 'demo' directory by 'cd' command. To run this tool, you need
     pip install regex
     pip install flask
     pip install pyvi
-    py app.py
+    python app.py
 
 An IP address will appear in a few seconds (maybe it is http://127.0.0.1:5000). Type this address in a web browser and enter to use text classification tool.
